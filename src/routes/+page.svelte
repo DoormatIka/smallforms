@@ -1,7 +1,6 @@
 <script>
     import {focusTrap} from "@skeletonlabs/skeleton";
 </script>
-<!-- YOU CAN DELETE EVERYTHING IN THIS PAGE -->
 
 <div class="container h-full mx-auto flex justify-center items-center">
 	<div class="space-y-3 text-center flex flex-col items-center">
@@ -14,7 +13,7 @@
 
 		<div class="flex-row justify-center md:flex items-center border">
 			<div class="pt-10 px-5 md:p-5">
-				<a href="/" class="btn variant-filled">Create a form</a>
+				<a href="/create" class="btn variant-filled">Create a form</a>
 			</div>
 			<div class="mx-5" />
 			<div class="py-10 px-5 md:p-5">

@@ -26,16 +26,16 @@
 						/>
 					</svg>
 				</figure>
-				<strong class="text-xl mx-5 gradient-heading">smallforms</strong>
+				<a href="/" rel="noreferrer" class="text-xl font-black h1 mx-5 gradient-heading">smallforms</a>
 			</svelte:fragment>
 			<svelte:fragment slot="trail">
 				<a
 					class="btn btn-sm variant-ghost-surface"
-					href="https://discord.gg/EXqV7W8MtY"
+					href="https://github.com/DoormatIka/smallforms"
 					target="_blank"
 					rel="noreferrer"
 				>
-					Discord
+					Github
 				</a>
 			</svelte:fragment>
 		</AppBar>
