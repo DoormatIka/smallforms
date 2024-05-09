@@ -1,12 +1,13 @@
 
 <script lang="ts">
-    import {flip} from "svelte/animate";
+	import {flip} from "svelte/animate";
 	import {writable} from "svelte/store";
+	import {nanoid} from "nanoid";
 
-	let posts = writable<string[]>([]);
+	let posts = writable<{ id: string, content: string }[]>([]);
 	function addPosts() {
 		// On^2 operation. find a better way.
-		posts.update(v => [...v, "placeholder"]);
+		posts.update(v => [...v, { id: nanoid(11), content: "" }]);
 	}
 	function removePosts(index: number) {
 		posts.update(v => {
@@ -20,24 +21,36 @@
 	<h2 class="h2">Create the form!</h2>
 </div>
 
-<div class="container h-full mx-auto flex-col justify-center">
+<div class="container h-full mx-auto flex-col justify-center m-5">
 	<form method="POST" class="label">
-		{#each $posts as post, i (i)}
+		<input 
+			type="text" 
+			class="input mb-5" 
+			placeholder="Title of form"
+		>
+		{#each $posts as post, i (post.id)}
 			<div class="flex space-x-3">
 				<input 
 					type="text" 
 					class="input" 
-					placeholder="title of text" 
-					value={post}
+					placeholder="Question" 
+					value={post.content}
 				>
 
-				<!-- whenever an element is removed, it will send a POST request. -->
-				<button class="btn variant-outline" on:click={() => removePosts(i)}>Remove</button>
+				<!-- removing posts does not make sense. -->
+				<!-- try getting a unique id for each post/question -->
+				<button type="button" class="btn variant-outline" on:click={() => removePosts(i)}>Remove</button>
 			</div>
-				<!-- use on:input on this to save the form state before adding another one. -->
 		{/each}
+		<div class="p-2"></div>
+
+		<div class="container space-x-2 flex justify-center">
+			<button type="button" class="btn variant-outline px-5" on:click={addPosts}>Add</button>
+			<!-- use on:click on the above to save the form state before adding another one. -->
+
+			<button type="submit" disabled class="btn variant-outline px-5" on:click={addPosts}>Submit</button>
+			<!-- get ready to use +page.server.ts -->
+		</div>
+
 	</form>
-	<div class="container my-5 flex justify-center">
-		<button class="btn variant-outline px-5" on:click={addPosts}>Add</button>
-	</div>
 </div>

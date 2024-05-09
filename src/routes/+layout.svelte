@@ -6,12 +6,8 @@
 <!-- App Shell -->
 <AppShell>
 	<svelte:fragment slot="header">
-		<!-- App Bar -->
-			<AppBar 
-				slotLead="bg-transparent" 
-				slotTrail="stroke-transparent" 
-				class="stroke-transparent"
-			>
+	<!-- App plar -->
+		<AppBar background="bg-transparent">
 			<svelte:fragment slot="lead">
 				<figure>
 					<section class="img-bg" />
