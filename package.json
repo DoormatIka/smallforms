@@ -30,6 +30,7 @@
   },
   "type": "module",
   "dependencies": {
-    "nanoid": "^5.0.7"
+    "nanoid": "^5.0.7",
+    "pocketbase": "^0.21.2"
   }
 }

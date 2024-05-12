@@ -22,7 +22,7 @@
 						/>
 					</svg>
 				</figure>
-				<a href="/" rel="noreferrer" class="text-xl font-black h1 mx-5 gradient-heading">smallforms</a>
+				<a href="/" rel="noreferrer" class="hover:tracking-widest transition-all text-xl font-black h1 mx-5 gradient-heading">smallforms</a>
 			</svelte:fragment>
 			<svelte:fragment slot="trail">
 				<a
