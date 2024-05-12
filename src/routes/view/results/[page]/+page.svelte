@@ -10,7 +10,7 @@
 </script>
 <p>View form {$page.params.page} here.</p>
 
-<div class="container">
+<div class="container mx-auto">
 	<ul class="list">
 		{#each dummy_data[0].a as answer, i}
 			<li>
