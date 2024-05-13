@@ -8,6 +8,11 @@ Using SvelteKit & Skeleton UI for front end.
 
 *Will* be hosted on netlify (frontend) and pockethost (backend).
 
+## Features
+- Creating forms (text only)
+- Password protected results (passwords are stored in plain text)
+- Answering forms
+
 ## Setup
 Open the command prompt in the folder you extracted this on.
 ```
