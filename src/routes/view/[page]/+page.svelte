@@ -2,11 +2,11 @@
 	import {enhance} from '$app/forms';
 	import {nanoid} from 'nanoid';
 	import type { ActionData, PageData, PageServerData } from './$types';
+	import { page } from "$app/stores";
 	
 	export let data: PageData;
 	export let form: ActionData;
 </script>
-
 	
 <div class="sm:w-3/4 p-10 md:p-0 mx-auto flex-col justify-center items-center">
 	<div class="container flex-auto list-dl">
@@ -29,15 +29,8 @@
 
 	<div class="p-10"></div>
 
-	<a href="" class="btn variant-ghost">Access Answers</a>
+	<a href="/view/results/{$page.params.page}" class="btn variant-ghost">Access Answers</a>
 
-	<div class="opacity-50 hover:opacity-100 transition-all">
-		<form method="post" action="?/see_answers" class="space-y-2">
-			<span class="h4">Password</span>
-			<input type="text" class="input" />
-			<button type="submit" class="btn variant-ghost">Access Answers</button>
-		</form>
-	</div>
 
 </div>
 

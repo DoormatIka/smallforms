@@ -1,18 +1,21 @@
 <script>
 	import { fade } from "svelte/transition";
+	import Logo from "$lib/components/Logo.svelte";
 </script>
 
 <div class="h-full mx-auto flex justify-center items-center">
 	<div class="space-y-3 text-center flex flex-col items-center variant-ringed p-10 m-3">
-		<div class="md:p-2"></div>
+
+		<Logo />
+		<div class="p-1"></div>
 
 		<h2 class="h2">Welcome to smallforms.</h2>
 		<p>A school project.</p>
 
-		<div class="md:p-3"></div>
+		<div class="sm:p-3"></div>
 
-		<div class="flex-row justify-center md:flex items-center">
-			<div class="px-5 md:p-5">
+		<div class="flex-row justify-center sm:flex items-center">
+			<div class="px-5 sm:p-5">
 				<a href="/create" class="btn variant-ghost">Create a form</a>
 			</div>
 			<div class="mx-5" />

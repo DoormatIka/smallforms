@@ -1,4 +1,5 @@
 
+import type {Question, Survey} from '$lib';
 import type { Actions, PageLoad, PageServerLoad } from './$types';
 import {redirect} from '@sveltejs/kit';
 import { fail, error } from '@sveltejs/kit';
@@ -24,13 +25,8 @@ export const actions = {
 		
 		redirect(300, "/");
 	},
-	see_answers: async ({ request }) => {
-		// right here!!
-	}
 } satisfies Actions;
 
-type Survey = RecordModel & {title: string, questions: string[], password: string};
-type Question = RecordModel & {answers: string[], question: string};
 
 export const load: PageServerLoad = async ({ params }) => {
 	const pb = new Pocketbase("http://127.0.0.1:8090");
@@ -51,7 +47,6 @@ export const load: PageServerLoad = async ({ params }) => {
 	} catch (err) {
 		throw error(404, "Cannot find your form here.");
 	}
-
 };
 
 
