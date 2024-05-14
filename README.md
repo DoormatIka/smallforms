@@ -35,4 +35,12 @@ pocketbase serve
 Have fun~
 
 ## Screenshots
+![image](https://github.com/DoormatIka/smallforms/assets/68234036/36c95201-a5ec-4359-9cd7-4773a206f8c5)
+![image](https://github.com/DoormatIka/smallforms/assets/68234036/25b0cae3-bd50-424a-b3a8-8023136a4c8c)
+![image](https://github.com/DoormatIka/smallforms/assets/68234036/0cd9747b-60bd-4189-ab8a-15454ed9946e)
+
+**Bonus Pocketbase Screenshot** 
+![image](https://github.com/DoormatIka/smallforms/assets/68234036/f922bc9b-a69d-4d8f-b734-d9a39678c467)
+
+
 
