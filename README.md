@@ -13,6 +13,13 @@ Using SvelteKit & Skeleton UI for front end.
 - Password protected results (passwords are stored in plain text)
 - Answering forms
 
+**Why are passwords stored in plain text?**
+- Because this is a prototype and I feel that security is not necessary for a prototype. However, when going in production, security is needed.
+- I have defended against basic exploits like XSS (Cross-site scripting) and SQL injection attacks (by validating every input server-side).
+
+## Usage
+You create a form `/create`, then it redirects you to the site, copy-paste the link and send it to people, then view the results by putting in the password.
+
 ## Setup
 Open the command prompt in the folder you extracted this on.
 ```
@@ -26,3 +33,6 @@ pocketbase serve
 ```
 
 Have fun~
+
+## Screenshots
+

@@ -31,9 +31,9 @@
 
 	<form method="POST" class="label" use:enhance>
 		<div>
-			<span class="h3">Title</span>
+			<span class="h3" id="title">Title</span>
 			<input type="text" name="title" class="input" required />
-			<span class="h3">Password</span>
+			<span class="h3" id="password">Password</span>
 			<input type="text" name="password" class="input" />
 		</div>
 

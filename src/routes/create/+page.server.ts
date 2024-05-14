@@ -25,6 +25,9 @@ export const actions = {
 				return fail(422, { error: "An empty field in one of the questions!" })
 			}
 		}
+		if (questions.length < 3) {
+			return fail(422, { error: "Please add at least 3 questions." });
+		}
 
 		const pb = new Pocketbase("http://127.0.0.1:8090");
 
