@@ -15,18 +15,11 @@
 				</a>
 			</svelte:fragment>
 			<svelte:fragment slot="trail">
-				<a
-					class="btn btn-sm variant-ghost-surface"
-					href="https://github.com/DoormatIka/smallforms"
-					target="_blank"
-					rel="noreferrer"
-				>
-					Github
-				</a>
+				<p class="opacity-30 hover:opacity-55 transition-all">Made with love.</p>
 			</svelte:fragment>
 		</AppBar>
 	</svelte:fragment>
 	<!-- Page Route Content -->
-	<slot />
+	<slot /> <!-- +page.svelte -->
 </AppShell>
 

@@ -31,7 +31,7 @@
 			<span class="h4">Password</span>
 			<input type="text" class="input" name="password" placeholder="View the results using a password" />
 			{#if form?.err}
-				<p class="bg-error-500">{form?.err}</p>
+				<p class="bg-error-500">Error: {form?.err}</p>
 			{/if}
 			<button type="submit" class="btn variant-ghost">Access Answers</button>
 		</form>
@@ -41,7 +41,7 @@
 
 	{#if form?.questions}
 		<div class="container mx-auto flex-col justify-center items-center">
-		<div class="card p-4 grid grid-cols-[auto_1fr_auto] gap-4 items-center h-1/2">
+		<div class="card p-4 grid sm:grid-cols-[auto_1fr_auto] gap-4 items-center h-1/2">
 				<button type="button" class="btn variant-filled" on:click={carouselLeft}>Left</button>
 				<div bind:this={elemCarousel} class="snap-x scroll-smooth flex overflow-x-auto">
 						{#each form.questions as { id, question, answers }}

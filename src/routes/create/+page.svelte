@@ -31,9 +31,9 @@
 
 	<form method="POST" class="label" use:enhance>
 		<div>
-			<span class="h3" id="title">Title</span>
+			<span class="h3">Title</span>
 			<input type="text" name="title" class="input" required />
-			<span class="h3" id="password">Password</span>
+			<span class="h3">Password</span>
 			<input type="text" name="password" class="input" />
 		</div>
 
@@ -49,8 +49,6 @@
 					value={post.content}
 					required
 				/>
-				<!-- removing posts does not make sense. -->
-				<!-- try getting a unique id for each post/question -->
 				<button type="button" class="btn variant-outline" on:click={() => removePosts(i)}>Remove</button>
 			</div>
 		{/each}
@@ -58,12 +56,7 @@
 
 		<div class="container space-x-2 flex justify-center">
 			<button type="button" class="btn variant-outline px-5" on:click={addPosts}>Add</button>
-			<!-- use on:click on the above to save the form state before adding another one. -->
-
-			<button type="submit" class="btn variant-outline px-5">
-				Submit
-			</button>
-			<!-- get ready to use +page.server.ts -->
+			<button type="submit" class="btn variant-outline px-5">Submit</button>
 		</div>
 
 	</form>

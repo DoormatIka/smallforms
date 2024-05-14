@@ -21,9 +21,6 @@ export const actions = {
 			} else {
 				questions.push({id: id, data: formdata.toString()});
 			}
-			if (formdata.toString().length <= 0) {
-				return fail(422, { error: "An empty field in one of the questions!" })
-			}
 		}
 		if (questions.length < 3) {
 			return fail(422, { error: "Please add at least 3 questions." });
